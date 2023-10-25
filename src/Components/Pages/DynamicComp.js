@@ -112,8 +112,12 @@ const DynamicComp = () => {
                     </Link>
                   </div>
                   <div className="card_content ">
-                    <h1>{item.heading.slice(0, 50) + " ..."}</h1>
-                    {item.discription.slice(0, 150) + " ..."}
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
+                      <h1>{item.heading.slice(0, 50) + " ..."}</h1>
+                    </Link>
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
+                      <p>{item.discription.slice(0, 150) + " ..."}</p>
+                    </Link>
                   </div>
 
                   <div className="icon2 more">

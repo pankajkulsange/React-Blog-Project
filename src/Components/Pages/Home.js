@@ -49,20 +49,24 @@ const Home = () => {
             .map((item, index) => {
               return (
                 <div className="home_display_card" key={index}>
-                  <Link to="/dynamicPage" state={{ index: item.id }}>
-                    <div className="card_image">
-                      {/* <img src={item.image} className="image_box" alt='not found'/> */}
+                  <div className="card_image">
+                    {/* <img src={item.image} className="image_box" alt='not found'/> */}
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
                       <img
                         src={item.image}
                         className="image_box"
                         alt="not found"
                       />
-                    </div>
-                    <div className="card_content">
+                    </Link>
+                  </div>
+                  <div className="card_content">
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
                       <h1>{item.heading.slice(0, 50) + " ..."}</h1>
+                    </Link>
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
                       <p>{item.discription.slice(0, 150) + " ..."}</p>
-                    </div>
-                  </Link>
+                    </Link>
+                  </div>
                 </div>
               );
             })}
@@ -76,8 +80,8 @@ const Home = () => {
                 return (
                   <div className="display_card" key={index}>
                     <div className="card_image">
-                      {/* <img src={item.image} className="image_box" alt='not found'/> */}
                       <Link to="/dynamicPage" state={{ index: item.id }}>
+                        {/* <img src={item.image} className="image_box" alt='not found'/> */}
                         <img
                           src={item.image}
                           className="image_box"
@@ -86,8 +90,12 @@ const Home = () => {
                       </Link>
                     </div>
                     <div className="card_content">
-                      <h1>{item.heading.slice(0, 50) + " ..."}</h1>
-                      <p>{item.discription.slice(0, 150) + " ..."}</p>
+                      <Link to="/dynamicPage" state={{ index: item.id }}>
+                        <h1>{item.heading.slice(0, 50) + " ..."}</h1>
+                      </Link>
+                      <Link to="/dynamicPage" state={{ index: item.id }}>
+                        <p>{item.discription.slice(0, 150) + " ..."}</p>
+                      </Link>
                     </div>
                   </div>
                 );

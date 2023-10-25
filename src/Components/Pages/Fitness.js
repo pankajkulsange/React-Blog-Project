@@ -17,7 +17,6 @@ const Fitness = () => {
                 <div className="display_card" key={index}>
                   <div className="card_image">
                     <Link to="/dynamicPage" state={{ index: item.id }}>
-                      {" "}
                       <img
                         src={item.image}
                         className="image_box"
@@ -26,8 +25,12 @@ const Fitness = () => {
                     </Link>
                   </div>
                   <div className="card_content">
-                    <h1>{item.heading.slice(0, 50) + " ..."}</h1>
-                    <p>{item.discription.slice(0, 150) + " ..."}</p>
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
+                      <h1>{item.heading.slice(0, 50) + " ..."}</h1>
+                    </Link>
+                    <Link to="/dynamicPage" state={{ index: item.id }}>
+                      <p>{item.discription.slice(0, 150) + " ..."}</p>
+                    </Link>
                   </div>
                 </div>
               );
