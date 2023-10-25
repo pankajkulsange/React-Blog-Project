@@ -7,7 +7,7 @@ import socialMediaIcon2 from "../assets/socialMediaIcon2.png";
 import { Store } from "../DataStore";
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
-import NavBar from "../NavBar";
+// import NavBar from "../NavBar";
 // import { useEffect } from "react";
 const DynamicComp = () => {
   React.useEffect(() => {
