@@ -608,4 +608,17 @@ header {
     box-sizing: border-box;
     font-size: 16px;
   }
+  #box-icon {
+    height: 40px;
+  }
+  #box-icon-user {
+    height: 60px;
+    width: 60px;
+  }
+  #the {
+    font-size: 16px;
+  }
+  #siren {
+    font-size: 40px;
+  }
 }

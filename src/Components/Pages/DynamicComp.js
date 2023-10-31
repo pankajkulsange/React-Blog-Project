@@ -48,14 +48,24 @@ const DynamicComp = () => {
         </div>
 
         <div className="userIcon">
-          <img src={User} alt="not found" width="100px" height="100px" />
+          <img
+            id="box-icon-user"
+            src={User}
+            alt="not found"
+            width="100px"
+            height="100px"
+          />
           <span>
             <b>Pankaj</b>
             <p>October 23 2023</p>
           </span>
-          <img src={socialMediaIcon2} alt="not found" height="60px" />
+          <img
+            id="box-icon"
+            src={socialMediaIcon2}
+            alt="not found"
+            height="60px"
+          />
         </div>
-        {/* width='500px' height='350px' */}
         <div className="dynamic_img">
           <img id="dynamic_img" src={updatedData[0].image} alt="not found" />
         </div>
