@@ -23,7 +23,9 @@ const NavBar = () => {
         <span id="siren">
           <Link to="/">Siren</Link>
         </span>
-        <button id="menu_button" onClick={menubox}></button>
+        <span className="menu-wrapper">
+          <button id="menu_button" onClick={menubox}></button>
+        </span>
         <span id="menu_list">
           <ul>
             <li className="link_nav">

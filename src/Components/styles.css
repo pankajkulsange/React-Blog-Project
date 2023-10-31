@@ -435,14 +435,25 @@ header {
     /* margin-top: 10px; */
     padding: 10px;
   }
+  .heading {
+    padding: 10px;
+  }
   #tittle {
     justify-content: space-around;
     width: 95vw;
     gap: 20px;
   }
+  #get_start {
+    width: 225px;
+  }
+  .menu-wrapper {
+    display: inline-block;
+    width: 50vw;
+  }
   #menu_button {
     display: block;
-    margin-top: 10px;
+    margin-top: 14px;
+    margin-right: 20px;
     float: right;
     background-image: url("./images.png");
     background-size: contain;
@@ -518,7 +529,7 @@ header {
   }
   .home_container {
     flex-direction: column;
-
+    margin-top: -30px;
     align-items: center;
     margin-left: 2vw;
   }
