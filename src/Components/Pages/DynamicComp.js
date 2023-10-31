@@ -7,19 +7,16 @@ import usericonimg from "../assets/user-icon-img.png";
 import { Store } from "../DataStore";
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
-// import NavBar from "../NavBar";
-// import { useEffect } from "react";
 const DynamicComp = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const data = useContext(Store);
-  // console.log("storedata", data);
   const id_value = useLocation().state.index;
-
-  // console.log("hello" + id_value);
   const updatedData = data[0].filter((item) => item.id === id_value);
-  // console.log(updatedData);
+  function handleClick() {
+    window.scrollTo(0, 0);
+  }
   return (
     <div>
       <Link to="/">
@@ -107,23 +104,27 @@ const DynamicComp = () => {
             .map((item, index) => {
               return (
                 <div className="home_display_card" key={index}>
-                  <div className="card_image">
-                    <Link to="/dynamicPage" state={{ index: item.id }}>
+                  <Link
+                    to="/dynamicPage"
+                    state={{ index: item.id }}
+                    onClick={handleClick}
+                  >
+                    <div className="card_image">
                       <img
                         src={item.image}
                         className="image_box"
                         alt="not found"
                       />
-                    </Link>
-                  </div>
-                  <div className="card_content ">
-                    <Link to="/dynamicPage" state={{ index: item.id }}>
-                      <h1>{item.heading.slice(0, 50) + " ..."}</h1>
-                    </Link>
-                    <Link to="/dynamicPage" state={{ index: item.id }}>
-                      <p>{item.discription.slice(0, 150) + " ..."}</p>
-                    </Link>
-                  </div>
+                    </div>
+                    <div className="card_content">
+                      <Link to="/dynamicPage" state={{ index: item.id }}>
+                        <h1>{item.heading.slice(0, 50) + " ..."}</h1>
+                      </Link>
+                      <Link to="/dynamicPage" state={{ index: item.id }}>
+                        <p>{item.discription.slice(0, 150) + " ..."}</p>
+                      </Link>
+                    </div>
+                  </Link>
 
                   <div className="icon2 more">
                     <img

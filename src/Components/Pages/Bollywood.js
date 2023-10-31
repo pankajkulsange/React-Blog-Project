@@ -1,18 +1,11 @@
 import React, { useContext } from "react";
 import { Store } from "../DataStore";
 import { Link } from "react-router-dom";
-// import GenericComp from "./GenericComp"
 import NavBar from "../NavBar";
-// import DynamicComp from "./DynamicComp";
 const Bollywood = () => {
   const [data] = useContext(Store);
-  // console.log("Bollywood", data);
-  // const [id,heading,image,discription,category]=data;
   return (
     <div>
-      {/* <GenericComp  */}
-      {/* id={id} heading={heading} image={image} discription={discription} category={category} /> */}
-
       <NavBar />
       <div className="card_parent">
         <div className="card_container1">
