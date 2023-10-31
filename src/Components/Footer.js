@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import socialMediaIcon2 from "./assets/socialMediaIcon2.png";
+import usericonimg from "./assets/user-icon-img.png";
 const Footer = () => {
   return (
     <div className="footer_container">
@@ -16,7 +16,7 @@ const Footer = () => {
           <div id="socialTemp">
             <img
               id="footerSocial"
-              src={socialMediaIcon2}
+              src={usericonimg}
               alt="not found"
               width="200px"
             />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import rythm from "../assets/rythm.svg";
 import share from "../assets/share.svg";
 import User from "../assets/User.png";
-import socialMediaIcon2 from "../assets/socialMediaIcon2.png";
+import usericonimg from "../assets/user-icon-img.png";
 import { Store } from "../DataStore";
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
@@ -59,12 +59,7 @@ const DynamicComp = () => {
             <b>Pankaj</b>
             <p>October 23 2023</p>
           </span>
-          <img
-            id="box-icon"
-            src={socialMediaIcon2}
-            alt="not found"
-            height="60px"
-          />
+          <img id="box-icon" src={usericonimg} alt="not found" height="60px" />
         </div>
         <div className="dynamic_img">
           <img id="dynamic_img" src={updatedData[0].image} alt="not found" />
